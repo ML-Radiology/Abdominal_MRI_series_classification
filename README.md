@@ -6,7 +6,7 @@ Accurate, automated MRI series identification is important for many applications
 The dataset is identical to that reported in [2] and is comprised of scans from multiple vendors and field strength scanners at a single institution. It is representative of typical MRI series from clinical abdominal MRI examinations. For each subject there is a single examination, which is typically comprised of 10-15 different series, and in each series there may be a few to more than 100 images of the same type. For series in which more than one set of parameters may be present (such as series containing diffusion weighted imaging with two b-values, or combined dynamic post-contrast series with multiple phases), the subgroups will be separated into distinct series to classify them separately. The original dataset contains 2,215 MRI series for 105 subjects with each subject having a single examination. The dataset was annotated for the series labels by three radiologists with 2-15 years of experience in abdominal imaging.  Nonstandard MRI series used in research protocols and series types with less than 10 examples have been excluded, leaving 19 classes; the training and testing datasets will be randomly selected from the remaining 2165 remaining series with an 80/20 split at the subject-level resulting in 1733 and 432 series, respectively, each with a single label for the series type. 
 
 ## Methods and Results:
-Custom code was written in the Python programming language (PSF, version 3.8.8) for data processing and analysis. The “pydicom” library (version 2.1.2) was used for DICOM metadata extraction, with several DICOM attributes selected as potential features for machine learning according to the method described by Gauriau et al. [1]. The attributes were then tokenized using one-hot encoding. For DICOM attributes that consisted of a list of strings, each value was converted to a binary feature (presence or absence of the attribute). Attributes containing numerical values were normalized.	The “scikit-learn” library version 0.24.1 was used to train the Random Forest classifier. Grid search was employed for hyperparameter optimization. 
+Custom code was written in the Python programming language (PSF, version 3.8.8) for data processing and analysis. The “pydicom” library (version 2.1.2) was used for DICOM metadata extraction, with several DICOM attributes selected as potential features for machine learning according to the method described by Gauriau et al. [1]. The non-numeric attributes were then tokenized using one-hot encoding. For DICOM attributes that consisted of a list of strings, each value was converted to a binary feature (presence or absence of the attribute). Attributes containing numerical values were normalized.	The “scikit-learn” library version 0.24.1 was used to train the Random Forest classifier. Grid search was employed for hyperparameter optimization. 
 
 
 ## Metadata Classifier
@@ -32,9 +32,9 @@ The metadata and pixel-based classifiers were used for predictions according to 
 ![img.png](/assets/FigCM_combined.png)
 
 ## Fusion Model (FusionModel class)
-This is the fully connected layer that takes the concatenated probability vectors from 2 (metadata+pixel modesl) or 3 (also nlp) models. The accuracy is typically below that of the NLP by itself (93% compared with 96%), but higher than that of the pixel and metadata models if all 3 models are used (generally 87-90%, compared with 87-88% for the individual pixel and meta models). The confusion matrix for the fusion model when all 3 submodels are used is shown below. 
+This is the fully connected layer that takes the concatenated probability vectors from 2 (metadata+pixel modesl) or 3 (also nlp) models. The accuracy is typically below that of the NLP by itself (93% compared with 96%), but higher than that of the pixel and metadata models if all 3 models are used (generally 87-90%, compared with 87-88% for the individual pixel and meta models). 
 
-![img.png](/assets/FigFusionAll20230416.png)
+#![img.png](/assets/FigFusionAll20230416.png)
 
 ## DICOM embedding of predictions
 
