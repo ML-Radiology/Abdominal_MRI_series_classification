@@ -30,7 +30,7 @@ from config import *
 from utils import *
 from model_container import ModelContainer
 
-from azure.storage.blob import BlobServiceClient
+#from azure.storage.blob import BlobServiceClient
 
 st.set_page_config(page_title="Abdominal MRI Series Classifier", layout="wide")
 
