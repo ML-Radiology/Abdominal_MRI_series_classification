@@ -1,0 +1,152 @@
+.
+├── Dockerfile
+├── README.md
+├── app
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── demo.cpython-311.pyc
+│   │   └── demo_utils.cpython-38.pyc
+│   ├── demo.py
+│   └── demo_utils.py
+├── assets
+│   ├── FigCM_con_and_7020230918.tif
+│   ├── FigCM_con_and_7020230923.tif
+│   ├── FigCM_dense20230828.tif
+│   ├── FigCM_dense20230919.tif
+│   ├── FigCM_dense20230923.tif
+│   ├── FigCM_dense7020230919.tif
+│   ├── FigCM_dense7020230923.tif
+│   ├── FigCM_dense7020231121.tif
+│   ├── FigCM_meta20230406.tif
+│   ├── FigCM_meta20230828.tif
+│   ├── FigCM_meta20230917.tif
+│   ├── FigCM_meta20230923.tif
+│   ├── FigPixel20230412.png
+│   └── figures
+│       ├── FigPixel20230322.png
+│       └── FigPixel20230322.tif
+├── current_packages.txt
+├── data
+│   ├── fusion_test.pkl
+│   ├── fusion_train.pkl
+│   ├── fusion_val.pkl
+│   ├── image_data_with_label082221.pkl
+│   ├── labels.txt
+│   ├── testfiles.csv
+│   ├── trainfiles.csv
+│   └── valfiles.csv
+├── models
+│   ├── DenseNet_model.pth
+│   ├── fusion_model_weights042223.pth
+│   ├── fusion_model_weights042423.pth
+│   ├── fusion_model_weights20230828.pth
+│   ├── fusion_model_weightsDense20230828.pth
+│   ├── fusion_model_weightsDense20230919.pth
+│   ├── fusion_model_weights_new.pth
+│   ├── fusion_model_weights_no_nlp042223.pth
+│   ├── fusion_model_weights_no_nlp042423.pth
+│   ├── fusion_model_weights_no_nlp20230828.pth
+│   ├── fusion_model_weights_no_nlpDense20230828.pth
+│   ├── fusion_model_weights_no_nlpDense20230919.pth
+│   ├── fusion_model_weights_no_nlpDense20231121.pth
+│   ├── fusion_model_weights_no_nlp_new.pth
+│   ├── meta_04152023.skl
+│   ├── metadata_scaler.pkl
+│   ├── pixel_model_041623.pth
+│   └── text_model20230415.st
+├── notebooks
+│   └── Driver_notebook_for_publication_results.ipynb
+├── requirements.txt
+├── scripts
+│   ├── NLP
+│   │   ├── NLP_inference.py
+│   │   ├── NLP_training.py
+│   │   ├── __intit__.py
+│   │   └── __pycache__
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── __init__.cpython-38.pyc
+│   │   ├── config.cpython-310.pyc
+│   │   ├── config.cpython-311.pyc
+│   │   ├── config.cpython-37.pyc
+│   │   ├── config.cpython-38.pyc
+│   │   ├── config.cpython-39.pyc
+│   │   ├── model_container.cpython-311.pyc
+│   │   ├── model_container.cpython-38.pyc
+│   │   ├── process_tree.cpython-311.pyc
+│   │   ├── process_tree.cpython-38.pyc
+│   │   ├── process_tree.cpython-39.pyc
+│   │   ├── train_meta_model.cpython-38.pyc
+│   │   ├── train_pixel_model.cpython-38.pyc
+│   │   ├── train_text_model.cpython-38.pyc
+│   │   ├── utils.cpython-310.pyc
+│   │   ├── utils.cpython-311.pyc
+│   │   ├── utils.cpython-37.pyc
+│   │   ├── utils.cpython-38.pyc
+│   │   └── utils.cpython-39.pyc
+│   ├── cnn
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── __init__.cpython-37.pyc
+│   │   │   ├── __init__.cpython-38.pyc
+│   │   │   ├── __init__.cpython-39.pyc
+│   │   │   ├── cnn_data_loaders.cpython-311.pyc
+│   │   │   ├── cnn_data_loaders.cpython-37.pyc
+│   │   │   ├── cnn_data_loaders.cpython-38.pyc
+│   │   │   ├── cnn_data_loaders.cpython-39.pyc
+│   │   │   ├── cnn_dataset.cpython-311.pyc
+│   │   │   ├── cnn_dataset.cpython-37.pyc
+│   │   │   ├── cnn_dataset.cpython-38.pyc
+│   │   │   ├── cnn_dataset.cpython-39.pyc
+│   │   │   ├── cnn_inference.cpython-311.pyc
+│   │   │   ├── cnn_inference.cpython-38.pyc
+│   │   │   ├── cnn_inference.cpython-39.pyc
+│   │   │   ├── cnn_model.cpython-311.pyc
+│   │   │   ├── cnn_model.cpython-37.pyc
+│   │   │   ├── cnn_model.cpython-38.pyc
+│   │   │   └── cnn_model.cpython-39.pyc
+│   │   ├── cnn_data_loaders.py
+│   │   ├── cnn_dataset.py
+│   │   ├── cnn_inference.py
+│   │   ├── cnn_model.py
+│   │   └── cnn_training.py
+│   ├── config.py
+│   ├── fusion_model
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── __init__.cpython-38.pyc
+│   │   │   ├── __init__.cpython-39.pyc
+│   │   │   ├── fus_inference.cpython-311.pyc
+│   │   │   ├── fus_inference.cpython-38.pyc
+│   │   │   ├── fus_inference.cpython-39.pyc
+│   │   │   ├── fus_model.cpython-311.pyc
+│   │   │   ├── fus_model.cpython-38.pyc
+│   │   │   ├── fus_model.cpython-39.pyc
+│   │   │   ├── fus_training.cpython-311.pyc
+│   │   │   └── fus_training.cpython-38.pyc
+│   │   ├── fus_inference.py
+│   │   ├── fus_model.py
+│   │   ├── fus_model_old.py
+│   │   └── fus_training.py
+│   ├── metadata
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── __init__.cpython-38.pyc
+│   │   │   ├── meta_inference.cpython-311.pyc
+│   │   │   ├── meta_inference.cpython-38.pyc
+│   │   │   ├── meta_training.cpython-311.pyc
+│   │   │   └── meta_training.cpython-38.pyc
+│   │   ├── meta_inference.py
+│   │   └── meta_training.py
+│   ├── model_container.py
+│   ├── process_tree.py
+│   ├── updated_current_packages.txt
+│   └── utils.py
+└── tree_structure.txt
+
+17 directories, 133 files
