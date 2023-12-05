@@ -13,7 +13,7 @@ Custom code was written in the Python programming language (PSF, version 3.8.8) 
 The metadata classifier is a RandomForest model. A grid search is used to tune hyperparameters, and the model is trained on the resultant optimized model. This can be quickly trained on a cpu, and has fairly high accruacy for many of the types of images. Because the pre and post contrast T1 fat saturation images have identical imaging parameters, the model does not do well in classifying these types of images.
 
 
-![img.tif](/assets/FigCM_meta02230406.tif)
+![img.tif](/assets/FigCM_meta202230406.tif)
 
 
 ## Pixel-based Classifier
