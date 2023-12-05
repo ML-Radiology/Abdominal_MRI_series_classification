@@ -60,8 +60,6 @@ scipy==1.10.1
 seaborn==0.12.2
 sentence-transformers==2.2.2
 sentencepiece==0.1.98
-
-sklearn==0.0.post4
 smart-open==6.3.0
 spacy==3.5.2
 spacy-legacy==3.0.12
