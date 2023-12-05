@@ -21,7 +21,7 @@ A single image from each series was selected to create the dataset similar to th
 
 
 Results from current model:
-![img.png](/assets/figures/FigCM_dense7020230923.tif)
+![img.png](/assets/FigCM_dense7020230923.tif)
 
 ## NLP Classifier
 A stentence transformer was trained over the 'Series Description' field.
@@ -29,12 +29,12 @@ A stentence transformer was trained over the 'Series Description' field.
 ## Heuristic Model
 The metadata and pixel-based classifiers were used for predictions according to the following rule: if the confidence for the prediction using the metadata classifier was 0.7 or greater, the metadata prediction was used as the overall prediction; if the confidence was lower, the prediction from the pixel-based classifier was used. The accuracy was 93% over the test dataset. 
 
-![img.png](/assets/figures/FigCM_combined.png)
+![img.png](/assets/FigCM_combined.png)
 
 ## Fusion Model (FusionModel class)
 This is the fully connected layer that takes the concatenated probability vectors from 2 (metadata+pixel modesl) or 3 (also nlp) models. The accuracy is typically below that of the NLP by itself (93% compared with 96%), but higher than that of the pixel and metadata models if all 3 models are used (generally 87-90%, compared with 87-88% for the individual pixel and meta models). The confusion matrix for the fusion model when all 3 submodels are used is shown below. 
 
-![img.png](/assets/figures/FigFusionAll20230416.png)
+![img.png](/assets/FigFusionAll20230416.png)
 
 ## DICOM embedding of predictions
 
