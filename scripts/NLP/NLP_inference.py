@@ -2,7 +2,7 @@ from __future__ import print_function
 import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer
-import nltk, spacy
+import nltk # spacy
 import sklearn
 from sklearn.model_selection import train_test_split
 import os
