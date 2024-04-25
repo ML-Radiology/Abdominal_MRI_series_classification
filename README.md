@@ -43,7 +43,7 @@ One potential method for storing the series predictions to avoid having to get i
 ## How to install and use the repository code
 **1. Clone this repository**
 ```
-git clone new_name_to_fill_in
+git clone [repository](https://github.com/ML-Radiology/Abdominal_MRI_series_classification.git)
 ```
 **2. Install requirements:**
 ```
