@@ -140,7 +140,7 @@ data_transforms4 = {
 }
 
 # creates instances of the custom dataset with batch_size=batch_size
-def get_data_loaders(train, val, test, batch_size, shuffle=True, num_workers=0):
+def get_data_loaders(train, val, test, batch_size, data_transforms = data_transforms, shuffle=True, num_workers=0):
     # Create instances of your custom dataset
     train_imgdata = ImgDataset(train, data_transforms['train'])
     val_imgdata = ImgDataset(val, data_transforms['val'])
