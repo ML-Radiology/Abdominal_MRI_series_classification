@@ -116,7 +116,7 @@ def main():
     model = model.to(device)  # Move the model to the appropriate device
 
     # Get the data loaders
-    batch_size = 64
+    batch_size = 16
     train_loader, val_loader, test_loader, dataset_sizes = get_data_loaders(train, val, test, batch_size)
     dataloaders = {'train': train_loader, 'val': val_loader, 'test': test_loader}
 
