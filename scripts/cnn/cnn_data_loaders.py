@@ -1,13 +1,24 @@
 import torch
 from torch.utils.data import DataLoader
-import torchvision
-from torchvision import datasets, models, transforms
-from torch.utils.data import Dataset
-
 try:
     from cnn_dataset import ImgDataset
 except ImportError:
     from .cnn_dataset import ImgDataset
+import torchvision
+from torchvision import datasets, models, transforms
+from torchvision.transforms import functional as F
+from torch.utils.data import Dataset
+from PIL import Image
+
+class AdjustGamma(object):
+    def __init__(self, gamma, gain=1):
+        self.gamma = gamma
+        self.gain = gain
+
+    def __call__(self, img):
+        return F.adjust_gamma(img, self.gamma, self.gain)
+
+
 
 # Data cropping and normalization, also converts single channel to 3 channel for the model
 data_transforms = {
