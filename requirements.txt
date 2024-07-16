@@ -66,7 +66,7 @@ spacy-legacy==3.0.12
 spacy-loggers==1.0.4
 srsly==2.4.6
 streamlit==1.21.0
-SimpleITK=2.2.1
+SimpleITK==2.2.1
 sympy==1.11.1
 thinc==8.1.9
 threadpoolctl==3.1.0
